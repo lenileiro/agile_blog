@@ -1,14 +1,9 @@
-class Comment():
+class Comment:
     def __init__(self):
+        # Comment Parameters
         self.messages = []
 
-    def get_author(self):
-        pass
-
     def set_message(self, message, author):
-        pass
-
-    def created_at(self):
         pass
 
     def replied_to(self):
