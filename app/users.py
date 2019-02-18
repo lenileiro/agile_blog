@@ -5,8 +5,8 @@ from comments import Comment
 class User():
     def __init__(self, name):
         self.name = name
-        self._online_status = False
         self._last_seen = None
+        self._is_logged_in = False
         self._lobby = Comment()
         self._class_received = self.__class__.__name__
 
@@ -17,16 +17,17 @@ class User():
         self.name = name
 
     def is_logged_in(self):
-        return self.is_logged_in
+        return self._is_logged_in
 
     def last_logged_in_at(self):
         self._last_seen = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     def login(self, _online_status):
-        self._online_status = True
+        self._is_logged_in = True
+        return self._is_logged_in
         
     def log_out(self):
-        self._online_status = False
+        self._is_logged_in = False
         self.last_logged_in_at()
   
   
