@@ -27,5 +27,3 @@ class Moderator(User):
 class Admin(Moderator):
     def editComment(self):
         pass
-
-        
