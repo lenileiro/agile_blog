@@ -1,6 +1,9 @@
 import datetime
+
 """manage users"""
-class User():
+
+
+class User(object):
     def __init__(self, name):
         self.name = name
         self._online_status = False
@@ -24,10 +27,12 @@ class User():
             self._online_status = True
         return _online_status
 
-class moderator(User):
-  def __init__(self, name):
-    super().__init__(name)
 
-class admin(User):
-  def __init__(self, name):
-    super().__init__(name)
+class Moderator(User):
+    def __init__(self, name):
+        super(Moderator, self).__init__(name)
+
+
+class Admin(User):
+    def __init__(self, name):
+        super(Admin, self).__init__(name)
