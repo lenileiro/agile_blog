@@ -1,7 +1,6 @@
 class Comment():
-    def __init__(self, message, author):
+    def __init__(self):
         self.messages = []
-        self.author = author
 
     def get_author(self):
         pass
