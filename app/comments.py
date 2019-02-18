@@ -1,16 +1,26 @@
+import datetime
+
 class Comment():
-    def __init__(self, message, author):
+    def __init__(self):
         self.messages = []
-        self.author = author
 
     def get_author(self):
         pass
         
     def set_message(self, message,author):
-        pass
+        self.messages = self.messages.append({
+            "author": author,
+            "message": message,
+            "timestamp": datetime.datetime.now(),
+            "id": len(self.messages)
+        })
 
-    def set_message(self, message,author):
-        pass
+    def edit_message(self, id, newmessage):
+        for message in self.messages:
+            if message["id"] == id:
+                message["message"] = newmessage
+
+
 
     def created_at(self):
         pass
